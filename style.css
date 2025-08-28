@@ -1,0 +1,522 @@
+/* Allgemeines Layout */
+body {
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url("phasmobackground.jpg") no-repeat center center fixed;
+    background-color: #121212;
+    background-size: cover;
+    color: #b9b5ff;
+  }
+  
+  header {
+    text-align: center;
+    padding: 3rem 1rem 1rem;
+    background-color: rgba(18, 18, 26, 0.9);
+  }
+  
+  header h1 {
+    font-family: 'Staatliches', sans-serif;
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    color: #b9b5ff;
+  }
+  .headline {
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  font-size: 20px;
+}
+  nav {
+    background-color: rgba(35, 44, 58, 0.9);
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  nav a {
+    color: #b9b5ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #ffffff;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    letter-spacing: 2px;
+  }
+  
+  h2 {
+    font-family: 'Staatliches', sans-serif;
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  
+  .card {
+    background-color: rgba(32, 32, 37, 0.85);
+    border-radius: 10px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+  }
+  
+  .card img {
+    width: 100%;
+    display: block;
+  }
+  
+  .caption {
+    padding: 1rem;
+  }
+  
+  .caption h3 {
+    margin-top: 0;
+    color: #ffffff;
+    font-family: 'Staatliches', sans-serif;
+    font-size: 1.4rem;
+  }
+  
+  .caption p {
+    font-size: 1rem;
+    color: #b9b5ff;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    color: #b9b5ff;
+    background-color: rgba(18, 18, 26, 0.8);
+    margin-top: 3rem;
+  }
+  
+  @media (max-width: 600px) {
+    nav ul {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    header h1 {
+      font-size: 2.2rem;
+    }
+  
+    h2 {
+      font-size: 1.6rem;
+    }
+  }
+  .nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+}
+.lightbox img {
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.lightbox-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border: 4px solid white;
+  border-radius: 10px;
+}
+.more-text {
+  display: none;
+}
+
+.read-more-btn {
+  background-color: transparent;
+  border: none;
+  color: #7c8aff;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0;
+}
+
+.read-more-btn:hover {
+  text-decoration: underline;
+}
+button {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  border: 1px solid #f0f0f0;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #333;
+  color: #fff;
+}
+.toggle-button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 1em;
+  transition: background-color 0.3s;
+}
+
+.toggle-button:hover {
+  background-color: #555;
+}
+.text-box {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  padding: 40px;
+  width: 90%;
+  max-width: 700px;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.text-box p {
+  text-align: center;
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #ffffff;
+}
+.text-box-container {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  color: #ffffff;
+}
+
+.jester-img {
+  position: absolute;
+  left: -481px; /* wie weit die Figur links aus der Box ragt */
+  top: -400px;   /* vertikale Position feinjustieren */
+  height: 1800px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+
+ .text-box {
+  background-color: #2a2a2a;
+  color: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  position: relative;
+  z-index: 1;
+  min-width: 300px;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* Du kannst den Wert anpassen für mehr oder weniger Abstand */
+  padding: 20px 0;
+  font-size: 18px;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+#about-section {
+  scroll-margin-top: 100px; /* Abstand von der oberen Kante */
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.section-title {
+  font-family: 'Staatliches', sans-serif;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  color: white;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.lebenslauf {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #fff;
+}
+
+.lebenslauf-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.lebenslauf-section .text-box-container {
+  width: 100%;
+  max-width: 900px;
+}
+.lebenslauf-box {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 12px;
+  color: white;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 18px;
+  line-height: 2;
+}
+.lebenslauf-section .section-title {
+  font-size: 36px;
+  margin-bottom: 30px;
+  font-family: 'Dosis', sans-serif;
+  letter-spacing: 1px;
+}
+#lebenslauf-title {
+  margin-top: 100px;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  text-align: center;
+  font-family: 'Staatliches', sans-serif;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.text-box ul {
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+
+.text-box h3 {
+  color: #a29bff;
+  margin-top: 30px;
+  font-size: 1.4rem;
+}
+footer {
+  background-color: #0d0d0d;
+  padding: 30px 0;
+  text-align: center;
+  color: #b5aaff;
+  font-size: 0.9rem;
+  margin-top: auto;
+  width: 100%;
+}
+.lebenslauf-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 30px;
+}
+
+.text-box {
+  background-color: #2a2a2a;
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 600px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.kibo-anlehnen {
+  position: absolute;
+  right: -270px; /* Abstand zur Box */
+  bottom: 0;
+  height: 700px;
+  z-index: 1;
+}
+
+.slider-container {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+  position: relative;
+}
+
+.slide {
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.slider-button {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background-color: #2e2e2e; /* oder dein gewünschtes dunkles Grau */
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 10;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+  opacity: 0.9; /* leicht transparent, optional */
+  transition: background-color 0.3s ease;
+}
+
+
+#prev-btn {
+  left: 0;
+}
+
+#next-btn {
+  right: 0;
+}
+
+.slide-kuerbis {
+  display: none;
+  text-align: center;
+  display: none;
+}
+
+.slide-kuerbis.active {
+  display: block;
+}
+
+.slider-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  max-height: 500px;
+  object-fit: contain;
+  
+}
+
+#prev-btn-kuerbis {
+  left: 10px;
+}
+
+#next-btn-kuerbis {
+  right: 10px;
+}
+
+
+
+
+
+/*pdf motivationsschreiben*/
+
+.motivation-link{
+  display:flex;
+  justify-content:center;
+  margin: 16px 0 24px;
+}
+.motivation-link a{
+  display:inline-block;
+  padding:12px 18px;
+  border-radius:10px;
+  background:#222;        /* dunkler Button, passend zu deinem Theme */
+  color:#fff;
+  text-decoration:none;
+  font-weight:700;
+  letter-spacing:.2px;
+  box-shadow:0 6px 18px rgba(0,0,0,.25);
+  transition:transform .08s ease, background .2s ease, box-shadow .2s ease;
+}
+.motivation-link a:hover{
+  background:#3a3a3a;
+  transform:translateY(-1px);
+  box-shadow:0 10px 24px rgba(0,0,0,.3);
+}
+.motivation-link a:active{
+  transform:translateY(0);
+}
+
+
+/*footer*/
+
+footer {
+  background-color: #0c0c0c; /* Hintergrund dunkel */
+  padding: 20px 0;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+footer p {
+  color: #b39cff; /* Lilaton */
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+footer a {
+  color: #b39cff;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: #d5c2ff; /* etwas helleres Lila beim Hover */
+}
+
+.footer-quote {
+  font-style: italic;
+  margin-top: 10px;
+  font-weight: normal;
+}
